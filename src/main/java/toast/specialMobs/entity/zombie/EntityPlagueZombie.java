@@ -48,13 +48,13 @@ public class EntityPlagueZombie extends Entity_SpecialZombie {
     }
 
     /// Called when this entity is killed.
-    @Override
-    protected void dropFewItems(boolean hit, int looting) {
-        super.dropFewItems(hit, looting);
-        for (int i = this.rand.nextInt(2 + looting); i-- > 0;) {
-            this.dropItem(
-                    Item.getItemFromBlock(this.rand.nextBoolean() ? Blocks.brown_mushroom : Blocks.red_mushroom),
-                    1);
-        }
-    }
+//    @Override
+//    protected void dropFewItems(boolean hit, int looting) {
+//        super.dropFewItems(hit, looting);
+//        for (int i = this.rand.nextInt(2 + looting); i-- > 0;) {
+//            this.dropItem(
+//                    Item.getItemFromBlock(this.rand.nextBoolean() ? Blocks.brown_mushroom : Blocks.red_mushroom),
+//                    1);
+//        }
+//    }
 }

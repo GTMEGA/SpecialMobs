@@ -23,10 +23,10 @@ public class EntityBabySpider extends Entity_SpecialSpider {
     }
 
     /// Called when this entity is killed.
-    @Override
-    protected void dropFewItems(boolean hit, int looting) {
-        for (int i = this.rand.nextInt(2 + looting); i-- > 0;) {
-            this.dropItem(Items.string, 1);
-        }
-    }
+//    @Override
+//    protected void dropFewItems(boolean hit, int looting) {
+//        for (int i = this.rand.nextInt(2 + looting); i-- > 0;) {
+//            this.dropItem(Items.string, 1);
+//        }
+//    }
 }

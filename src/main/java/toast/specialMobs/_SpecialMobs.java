@@ -45,6 +45,8 @@ public class _SpecialMobs {
 
     /** If true, this mod starts up in debug mode. */
     public static final boolean debug = false;
+
+    public static final boolean loot = false;
     /**
      * The sided proxy. This points to a "common" proxy if and only if we are on a dedicated server. Otherwise, it
      * points to a client proxy.

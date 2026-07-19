@@ -67,51 +67,51 @@ public class EntityThiefSkeleton extends Entity_SpecialSkeleton {
     }
 
     /// Called when this entity is killed.
-    @Override
-    protected void dropFewItems(boolean hit, int looting) {
-        super.dropFewItems(hit, looting);
-        if (hit && (this.rand.nextInt(3) == 0 || this.rand.nextInt(1 + looting) > 0)) {
-            this.dropItem(Items.gold_nugget, 1);
-        }
-    }
-
-    /// Called 2.5% of the time when this entity is killed. 20% chance that superRare == 1, otherwise superRare == 0.
-    @Override
-    protected void dropRareDrop(int superRare) {
-        ItemStack itemStack;
-        String name;
-        if (this.rand.nextBoolean()) {
-            Item[] armor = { Items.leather_helmet, Items.leather_chestplate, Items.leather_leggings,
-                    Items.leather_boots };
-            String[] armorNames = { "Cap", "Tunic", "Pants", "Boots" };
-            int choice = this.rand.nextInt(armor.length);
-            itemStack = new ItemStack(armor[choice]);
-            name = armorNames[choice];
-            EffectHelper.addItemText(itemStack, "\u00a77\u00a7oGuaranteed 22% sneakier than");
-            EffectHelper.addItemText(itemStack, "\u00a77\u00a7othe next leading brand!");
-            EffectHelper.dye(itemStack, 0x0a141f);
-            EffectHelper.enchantItem(this.rand, itemStack, 30);
-        } else {
-            Item[] tools = { Items.golden_sword, Items.bow, Items.fishing_rod, Items.golden_pickaxe, Items.golden_axe,
-                    Items.golden_shovel };
-            String[] toolNames = { "Knife", "Bow", "Fishing Rod", "Pickaxe", "Axe", "Shovel" };
-            int choice = this.rand.nextInt(tools.length);
-            itemStack = new ItemStack(tools[choice]);
-            name = toolNames[choice];
-            EffectHelper.addItemText(itemStack, "\u00a77\u00a7o\"Finders keepers\"");
-            if (tools[choice] instanceof ItemFishingRod) {
-                EffectHelper.enchantItem(itemStack, Enchantment.field_151370_z, 5);
-            } else {
-                EffectHelper.enchantItem(itemStack, Enchantment.looting, 5);
-                if (!(tools[choice] instanceof ItemBow)) {
-                    EffectHelper.enchantItem(itemStack, Enchantment.fortune, 5);
-                }
-            }
-        }
-
-        EffectHelper.setItemName(itemStack, "Thief's " + name, 0xe);
-        EffectHelper.overrideEnchantment(itemStack, Enchantment.unbreaking, 3);
-
-        this.entityDropItem(itemStack, 0.0F);
-    }
+//    @Override
+//    protected void dropFewItems(boolean hit, int looting) {
+//        super.dropFewItems(hit, looting);
+//        if (hit && (this.rand.nextInt(3) == 0 || this.rand.nextInt(1 + looting) > 0)) {
+//            this.dropItem(Items.gold_nugget, 1);
+//        }
+//    }
+//
+//    /// Called 2.5% of the time when this entity is killed. 20% chance that superRare == 1, otherwise superRare == 0.
+//    @Override
+//    protected void dropRareDrop(int superRare) {
+//        ItemStack itemStack;
+//        String name;
+//        if (this.rand.nextBoolean()) {
+//            Item[] armor = { Items.leather_helmet, Items.leather_chestplate, Items.leather_leggings,
+//                    Items.leather_boots };
+//            String[] armorNames = { "Cap", "Tunic", "Pants", "Boots" };
+//            int choice = this.rand.nextInt(armor.length);
+//            itemStack = new ItemStack(armor[choice]);
+//            name = armorNames[choice];
+//            EffectHelper.addItemText(itemStack, "\u00a77\u00a7oGuaranteed 22% sneakier than");
+//            EffectHelper.addItemText(itemStack, "\u00a77\u00a7othe next leading brand!");
+//            EffectHelper.dye(itemStack, 0x0a141f);
+//            EffectHelper.enchantItem(this.rand, itemStack, 30);
+//        } else {
+//            Item[] tools = { Items.golden_sword, Items.bow, Items.fishing_rod, Items.golden_pickaxe, Items.golden_axe,
+//                    Items.golden_shovel };
+//            String[] toolNames = { "Knife", "Bow", "Fishing Rod", "Pickaxe", "Axe", "Shovel" };
+//            int choice = this.rand.nextInt(tools.length);
+//            itemStack = new ItemStack(tools[choice]);
+//            name = toolNames[choice];
+//            EffectHelper.addItemText(itemStack, "\u00a77\u00a7o\"Finders keepers\"");
+//            if (tools[choice] instanceof ItemFishingRod) {
+//                EffectHelper.enchantItem(itemStack, Enchantment.field_151370_z, 5);
+//            } else {
+//                EffectHelper.enchantItem(itemStack, Enchantment.looting, 5);
+//                if (!(tools[choice] instanceof ItemBow)) {
+//                    EffectHelper.enchantItem(itemStack, Enchantment.fortune, 5);
+//                }
+//            }
+//        }
+//
+//        EffectHelper.setItemName(itemStack, "Thief's " + name, 0xe);
+//        EffectHelper.overrideEnchantment(itemStack, Enchantment.unbreaking, 3);
+//
+//        this.entityDropItem(itemStack, 0.0F);
+//    }
 }

@@ -42,11 +42,11 @@ public class EntityLightningCreeper extends Entity_SpecialCreeper {
     }
 
     /// Called when this entity is killed.
-    @Override
-    protected void dropFewItems(boolean hit, int looting) {
-        super.dropFewItems(hit, looting);
-        for (int i = this.rand.nextInt(2 + looting); i-- > 0;) {
-            this.dropItem(Items.redstone, 1);
-        }
-    }
+//    @Override
+//    protected void dropFewItems(boolean hit, int looting) {
+//        super.dropFewItems(hit, looting);
+//        for (int i = this.rand.nextInt(2 + looting); i-- > 0;) {
+//            this.dropItem(Items.redstone, 1);
+//        }
+//    }
 }

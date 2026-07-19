@@ -1,7 +1,6 @@
 # SpecialMobs
 Adds variants to the vanilla mobs to make them more interesting and challenging.
 
-Legacy changelog is located at src/main/resources/changelog.txt
-
-## Fork
-This mod was forked by the GTNH Team to continue the development of the 1.7.10 branch.
+# Fork
+This mod was originally forked by the GT:NH Team to continue the development of the 1.7.10 Branch.
+This mod is being forked again by MEGA for small tweaks

@@ -82,42 +82,42 @@ public class EntityMotherSpider extends Entity_SpecialSpider implements IMobInfo
     }
 
     /// Called 2.5% of the time when this entity is killed. 20% chance that superRare == 1, otherwise superRare == 0.
-    @Override
-    protected void dropRareDrop(int superRare) {
-        // ALL CHANGES IN HERE MUST BE ALSO MADE IN provideDropsInformation
-        ItemStack itemStack;
-        String name;
-        if (this.rand.nextBoolean()) {
-            Item[] armor = { Items.chainmail_helmet, Items.chainmail_chestplate, Items.chainmail_leggings,
-                    Items.chainmail_boots };
-            String[] armorNames = { "Helmet", "Chestplate", "Leggings", "Boots" };
-            int choice = this.rand.nextInt(armor.length);
-            itemStack = new ItemStack(armor[choice]);
-            name = armorNames[choice];
-        } else {
-            Item[] tools = { Items.stone_sword, Items.bow, Items.stone_pickaxe, Items.stone_axe, Items.stone_shovel };
-            String[] toolNames = { "Sword", "Bow", "Pickaxe", "Axe", "Shovel" };
-            int choice = this.rand.nextInt(tools.length);
-            itemStack = new ItemStack(tools[choice]);
-            name = toolNames[choice];
-        }
-
-        int maxDamage = Math.max(itemStack.getMaxDamage() - 25, 1);
-        int damage = itemStack.getMaxDamage() - this.rand.nextInt(this.rand.nextInt(maxDamage) + 1);
-        if (damage > maxDamage) {
-            damage = maxDamage;
-        } else if (damage < 1) {
-            damage = 1;
-        }
-        itemStack.setItemDamage(damage);
-
-        EffectHelper.setItemName(itemStack, "Partially Digested " + name, 0xa);
-        EffectHelper.addItemText(itemStack, "\u00a77\u00a7oIt's a bit slimy...");
-        EffectHelper.enchantItem(this.rand, itemStack, 30);
-        EffectHelper.overrideEnchantment(itemStack, Enchantment.unbreaking, 10);
-
-        this.entityDropItem(itemStack, 0.0F);
-    }
+//    @Override
+//    protected void dropRareDrop(int superRare) {
+//        // ALL CHANGES IN HERE MUST BE ALSO MADE IN provideDropsInformation
+//        ItemStack itemStack;
+//        String name;
+//        if (this.rand.nextBoolean()) {
+//            Item[] armor = { Items.chainmail_helmet, Items.chainmail_chestplate, Items.chainmail_leggings,
+//                    Items.chainmail_boots };
+//            String[] armorNames = { "Helmet", "Chestplate", "Leggings", "Boots" };
+//            int choice = this.rand.nextInt(armor.length);
+//            itemStack = new ItemStack(armor[choice]);
+//            name = armorNames[choice];
+//        } else {
+//            Item[] tools = { Items.stone_sword, Items.bow, Items.stone_pickaxe, Items.stone_axe, Items.stone_shovel };
+//            String[] toolNames = { "Sword", "Bow", "Pickaxe", "Axe", "Shovel" };
+//            int choice = this.rand.nextInt(tools.length);
+//            itemStack = new ItemStack(tools[choice]);
+//            name = toolNames[choice];
+//        }
+//
+//        int maxDamage = Math.max(itemStack.getMaxDamage() - 25, 1);
+//        int damage = itemStack.getMaxDamage() - this.rand.nextInt(this.rand.nextInt(maxDamage) + 1);
+//        if (damage > maxDamage) {
+//            damage = maxDamage;
+//        } else if (damage < 1) {
+//            damage = 1;
+//        }
+//        itemStack.setItemDamage(damage);
+//
+//        EffectHelper.setItemName(itemStack, "Partially Digested " + name, 0xa);
+//        EffectHelper.addItemText(itemStack, "\u00a77\u00a7oIt's a bit slimy...");
+//        EffectHelper.enchantItem(this.rand, itemStack, 30);
+//        EffectHelper.overrideEnchantment(itemStack, Enchantment.unbreaking, 10);
+//
+//        this.entityDropItem(itemStack, 0.0F);
+//    }
 
     @Optional.Method(modid = "mobsinfo")
     @Override

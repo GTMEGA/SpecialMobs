@@ -54,30 +54,30 @@ public class EntityWitchSpider extends Entity_SpecialSpider {
     }
 
     /// Called 2.5% of the time when this entity is killed. 20% chance that superRare == 1, otherwise superRare == 0.
-    @Override
-    protected void dropRareDrop(int superRare) {
-        Item drop = null;
-        switch (this.rand.nextInt(5)) {
-            case 0:
-                drop = Items.redstone;
-                break;
-            case 1:
-                drop = Items.glowstone_dust;
-                break;
-            case 2:
-                drop = Items.ghast_tear;
-                break;
-            case 3:
-                drop = Items.blaze_powder;
-                break;
-            case 4:
-                drop = Items.magma_cream;
-                break;
-        }
-        if (drop != null) {
-            this.dropItem(drop, 1);
-        }
-    }
+//    @Override
+//    protected void dropRareDrop(int superRare) {
+//        Item drop = null;
+//        switch (this.rand.nextInt(5)) {
+//            case 0:
+//                drop = Items.redstone;
+//                break;
+//            case 1:
+//                drop = Items.glowstone_dust;
+//                break;
+//            case 2:
+//                drop = Items.ghast_tear;
+//                break;
+//            case 3:
+//                drop = Items.blaze_powder;
+//                break;
+//            case 4:
+//                drop = Items.magma_cream;
+//                break;
+//        }
+//        if (drop != null) {
+//            this.dropItem(drop, 1);
+//        }
+//    }
 
     /// Damages this entity from the damageSource by the given amount. Returns true if this entity is damaged.
     @Override

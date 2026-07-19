@@ -211,35 +211,35 @@ public class EntityNinjaSkeleton extends Entity_SpecialSkeleton implements INinj
     }
 
     /// Called when this entity is killed.
-    @Override
-    protected void dropFewItems(boolean hit, int looting) {
-        super.dropFewItems(hit, looting);
-        for (int i = this.rand.nextInt(3 + looting); i-- > 0;) {
-            this.dropItem(Items.paper, 1);
-        }
-        for (int i = this.rand.nextInt(2 + looting); i-- > 0;) {
-            this.dropItem(Items.dye, 1);
-        }
-    }
+//    @Override
+//    protected void dropFewItems(boolean hit, int looting) {
+//        super.dropFewItems(hit, looting);
+//        for (int i = this.rand.nextInt(3 + looting); i-- > 0;) {
+//            this.dropItem(Items.paper, 1);
+//        }
+//        for (int i = this.rand.nextInt(2 + looting); i-- > 0;) {
+//            this.dropItem(Items.dye, 1);
+//        }
+//    }
 
     /// Called 2.5% of the time when this entity is killed. 20% chance that superRare == 1, otherwise superRare == 0.
-    @Override
-    protected void dropRareDrop(int superRare) {
-        ItemStack drop = new ItemStack(Items.iron_sword);
-        try {
-            EffectHelper.enchantItem(this.rand, drop, 30);
-            if (EnchantmentSpecial.painSword != null) {
-                EffectHelper.overrideEnchantment(drop, EnchantmentSpecial.painSword, 2);
-            } else {
-                EffectHelper.overrideEnchantment(drop, Enchantment.sharpness, 2);
-            }
-            EffectHelper.overrideEnchantment(drop, Enchantment.unbreaking, 5);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        EffectHelper.setItemName(drop, "Kusanagi-no-Tsurugi", 0xd);
-        this.entityDropItem(drop, 0.0F);
-    }
+//    @Override
+//    protected void dropRareDrop(int superRare) {
+//        ItemStack drop = new ItemStack(Items.iron_sword);
+//        try {
+//            EffectHelper.enchantItem(this.rand, drop, 30);
+//            if (EnchantmentSpecial.painSword != null) {
+//                EffectHelper.overrideEnchantment(drop, EnchantmentSpecial.painSword, 2);
+//            } else {
+//                EffectHelper.overrideEnchantment(drop, Enchantment.sharpness, 2);
+//            }
+//            EffectHelper.overrideEnchantment(drop, Enchantment.unbreaking, 5);
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//        }
+//        EffectHelper.setItemName(drop, "Kusanagi-no-Tsurugi", 0xd);
+//        this.entityDropItem(drop, 0.0F);
+//    }
 
     @Override
     public void handleHealthUpdate(byte b) {

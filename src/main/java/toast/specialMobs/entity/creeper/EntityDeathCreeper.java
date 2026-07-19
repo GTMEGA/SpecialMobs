@@ -35,20 +35,20 @@ public class EntityDeathCreeper extends Entity_SpecialCreeper {
     }
 
     /// Called when this entity is killed.
-    @Override
-    protected void dropFewItems(boolean hit, int looting) {
-        super.dropFewItems(hit, looting);
-        for (int i = this.rand.nextInt(3 + looting) + 1; i-- > 0;) {
-            this.dropItem(Items.gunpowder, 1);
-        }
-        if (hit && this.isBurning() && looting > 0) {
-            // this.dropItem(Items.record_13 + this.rand.nextInt(Items.record_wait - Items.record_13 + 1), 1);
-        }
-    }
+//    @Override
+//    protected void dropFewItems(boolean hit, int looting) {
+//        super.dropFewItems(hit, looting);
+//        for (int i = this.rand.nextInt(3 + looting) + 1; i-- > 0;) {
+//            this.dropItem(Items.gunpowder, 1);
+//        }
+//        if (hit && this.isBurning() && looting > 0) {
+//            // this.dropItem(Items.record_13 + this.rand.nextInt(Items.record_wait - Items.record_13 + 1), 1);
+//        }
+//    }
 
     /// Called 2.5% of the time when this entity is killed. 20% chance that superRare == 1, otherwise superRare == 0.
-    @Override
-    protected void dropRareDrop(int superRare) {
-        this.dropItem(Item.getItemFromBlock(Blocks.tnt), 1);
-    }
+//    @Override
+//    protected void dropRareDrop(int superRare) {
+//        this.dropItem(Item.getItemFromBlock(Blocks.tnt), 1);
+//    }
 }

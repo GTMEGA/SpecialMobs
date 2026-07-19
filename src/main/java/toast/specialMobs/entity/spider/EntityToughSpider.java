@@ -32,17 +32,17 @@ public class EntityToughSpider extends Entity_SpecialSpider {
     }
 
     /// Called when this entity is killed.
-    @Override
-    protected void dropFewItems(boolean hit, int looting) {
-        super.dropFewItems(hit, looting);
-        for (int i = this.rand.nextInt(2 + looting); i-- > 0;) {
-            this.dropItem(Items.flint, 1);
-        }
-    }
+//    @Override
+//    protected void dropFewItems(boolean hit, int looting) {
+//        super.dropFewItems(hit, looting);
+//        for (int i = this.rand.nextInt(2 + looting); i-- > 0;) {
+//            this.dropItem(Items.flint, 1);
+//        }
+//    }
 
     /// Called 2.5% of the time when this entity is killed. 20% chance that superRare == 1, otherwise superRare == 0.
-    @Override
-    protected void dropRareDrop(int superRare) {
-        this.dropItem(Items.iron_ingot, 1);
-    }
+//    @Override
+//    protected void dropRareDrop(int superRare) {
+//        this.dropItem(Items.iron_ingot, 1);
+//    }
 }

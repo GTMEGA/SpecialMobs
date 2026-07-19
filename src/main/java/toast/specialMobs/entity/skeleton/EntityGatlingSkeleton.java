@@ -36,14 +36,14 @@ public class EntityGatlingSkeleton extends Entity_SpecialSkeleton {
     }
 
     /// Called when this entity is killed.
-    @Override
-    protected void dropFewItems(boolean hit, int looting) {
-        super.dropFewItems(hit, looting);
-        for (int i = this.rand.nextInt(2) + 1; i-- > 0;) {
-            this.dropItem(Items.arrow, 1);
-        }
-        if (hit && (this.rand.nextInt(3) == 0 || this.rand.nextInt(1 + looting) > 0)) {
-            this.dropItem(Items.gunpowder, 1);
-        }
-    }
+//    @Override
+//    protected void dropFewItems(boolean hit, int looting) {
+//        super.dropFewItems(hit, looting);
+//        for (int i = this.rand.nextInt(2) + 1; i-- > 0;) {
+//            this.dropItem(Items.arrow, 1);
+//        }
+//        if (hit && (this.rand.nextInt(3) == 0 || this.rand.nextInt(1 + looting) > 0)) {
+//            this.dropItem(Items.gunpowder, 1);
+//        }
+//    }
 }

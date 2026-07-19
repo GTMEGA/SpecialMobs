@@ -51,11 +51,11 @@ public class EntityPaleSpider extends Entity_SpecialSpider {
     }
 
     /// Called when this entity is killed.
-    @Override
-    protected void dropFewItems(boolean hit, int looting) {
-        super.dropFewItems(hit, looting);
-        if (hit && (this.rand.nextInt(5) == 0 || this.rand.nextInt(1 + looting) > 0)) {
-            this.dropItem(Items.fermented_spider_eye, 1);
-        }
-    }
+//    @Override
+//    protected void dropFewItems(boolean hit, int looting) {
+//        super.dropFewItems(hit, looting);
+//        if (hit && (this.rand.nextInt(5) == 0 || this.rand.nextInt(1 + looting) > 0)) {
+//            this.dropItem(Items.fermented_spider_eye, 1);
+//        }
+//    }
 }
